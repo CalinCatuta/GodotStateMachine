@@ -60,7 +60,3 @@ To use this state machine in your Godot project, follow these steps:
 5.  **Trigger Transitions**: In each state script, call the `StateMachine`'s transition function to switch to a new state when a condition is met (e.g., pressing a key).
 
 ---
-
-## Credits
-
-This Godot State Machine was created by Calin Catuta.
