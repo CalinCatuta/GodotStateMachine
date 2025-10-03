@@ -1,6 +1,6 @@
 class_name NodeState
 # Node is a base class for all things that exist in 2d space.
-# se face extends(inherite) pe Node pentru a putea folosi toate metodele lui
+# extends = inherite so we can use his methods.
 extends Node
 
 @warning_ignore("unused_signal")
