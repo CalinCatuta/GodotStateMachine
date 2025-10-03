@@ -32,7 +32,7 @@ The `node_state.gd` script is a base class that all other states inherit from. I
 * **`exit()`**: This function is called when the state is exited. It's the place to clean up anything the state has created.
 * **`process(delta)`**: This function is called every frame and contains the logic that should be executed for the state.
 * **`physics_process(delta)`**: This function is called at a fixed interval and is used for physics-related logic.
-* **`unhandled_input(event)`**: This function is used to handle input events.
+* **`transition_to(state_name)`**: This function is used to handle input events.
 
 To see the base state logic, check the `Player/name_state.gd` file in this repository.
 
@@ -45,8 +45,8 @@ Here are the states that are implemented in this project:
 * **`Idle.gd`**: *This is the default state where the character is standing still.*
 * **`Walk.gd`**: *This state is active when the character is moving left or right.*
 * **`Chopping.gd`**: *This state is active when the character click left mouse button to cut trees.*
-* * **`Tilling.gd`**: *This state is active when the character click left mouse button to till the dirt.*
-  * * * **`Watering.gd`**: *This state is active when the character click left mouse button to water the till dirt.*
+* **`Tilling.gd`**: *This state is active when the character click left mouse button to till the dirt.*
+* **`Watering.gd`**: *This state is active when the character click left mouse button to water the till dirt.*
 ---
 
 ## How to Use
