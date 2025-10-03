@@ -1,5 +1,5 @@
 # Node is a base class for all things that exist in 2d space.
-# se face extends(inherite) pe Node pentru a putea folosi toate metodele lui
+# extends = inherite so we can use his methods.
 extends NodeState
 
 @export var player: Player
@@ -12,13 +12,13 @@ func _on_process(_delta : float) -> void:
 func _on_physics_process(_delta : float) -> void:
 	pass
 
-# Se ma intoarce mereu in state Idle, caracterul va sta pe loc cand va face o actiune.
+# Go back to Idle if the player isn't moving
 func _on_next_transitions() -> void:
 	if !animated_sprite_2d.is_playing():
 		transition.emit("Idle")
 
-# folosim on_enter pentru ca chopping este o animatie care ruleaza iar caracterul nu se misca cu adevarat
-# Vector ramane la fel asa ca ii vom spune animatiei in care directie sa ruleze
+# we use on_enter bcs the player ins't moving when tilling and the action is a animation not a Vector2 movement.
+# keep the player direction/Vector2 in the same direction the player was when he was moving.
 func _on_enter() -> void:
 	if player.player_dir == Vector2.UP:
 		animated_sprite_2d.play("wattering-b")
