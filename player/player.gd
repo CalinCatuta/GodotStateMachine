@@ -1,7 +1,7 @@
 class_name Player
 extends CharacterBody2D
 
-# Setare state None default. Enum state -> data_types
+# None as Default.
 @export var current_toll: DataTypes.Tools = DataTypes.Tools.None
-# Daca jucatorul nu sta pe loc atunci setam direction din obj player cu cea din GameInputEvents.
+# we set this dir with the one in the game_input_events
 var player_dir: Vector2
