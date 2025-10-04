@@ -16,7 +16,7 @@ The core logic of this state machine is built around two main scripts: the `Stat
 
 ### `StateMachine.gd`
 
-The `StateMachine.gd` script is the heart of the state machine. It is responsible for managing the different states and transitioning between them.
+The `node_state_machine.gd` script is the heart of the state machine. It is responsible for managing the different states and transitioning between them.
 
 * **Manages States**: It holds a reference to all possible states and the current active state.
 * **Handles Transitions**: It contains the logic to switch from one state to another.
